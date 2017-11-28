@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testCase id="e69e3ed3-2b88-46da-b20e-c15823963cd7" discardOkResults="true" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="First Branch for Second Branch" searchProperties="true" timeout="0" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="e69e3ed3-2b88-46da-b20e-c15823963cd7fileName">First-Branch-for-Second-Branch</con:setting>
+  </con:settings>
+  <con:savedRecentRuns>1</con:savedRecentRuns>
+  <con:properties/>
+  <con:reportParameters/>
+</con:testCase>
