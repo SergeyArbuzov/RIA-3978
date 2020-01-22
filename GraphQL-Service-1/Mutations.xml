@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:operationGroup type="mutation" name="Mutations" id="b45266df-3533-4cca-813b-ec6caaafec59" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="b45266df-3533-4cca-813b-ec6caaafec59fileName">Mutations</con:setting>
+  </con:settings>
+  <con:graphQLOperation name="addCustomer" bindingOperationName="addCustomer" id="421dffd9-cbbe-4974-84aa-95e566029792">
+    <con:settings/>
+    <con:graphQLRequest name="addCustomer" id="d320e035-9139-46b3-9e01-a35911528a2d">
+      <con:settings/>
+      <con:endpoint>http://rapis02.aqa.com.ru:4005/graphql</con:endpoint>
+      <con:request>{"query":"mutation {\n  addCustomer(name: \"string\", email: \"string\", age: 0) {\n    id\n    name\n    email\n    age\n    gender\n    status\n    products {\n      productID\n      productName\n      quantity\n      info {\n        made\n        design\n        warranty\n        AnnualFailureRate\n      }\n      availableIn\n    }\n    data {\n      LicenseType\n      Status\n    }\n  }\n}\n","operationName":null,"variables":null}</con:request>
+    </con:graphQLRequest>
+  </con:graphQLOperation>
+  <con:graphQLOperation name="editCustomer" bindingOperationName="editCustomer" id="11738f3c-8e75-4435-a5d9-ee7533876ea8">
+    <con:settings/>
+    <con:graphQLRequest name="editCustomer" id="bb0fda91-4efc-484a-9941-211e9ba0b1c1">
+      <con:settings/>
+      <con:endpoint>http://rapis02.aqa.com.ru:4005/graphql</con:endpoint>
+      <con:request>{"query":"mutation {\n  editCustomer(id: \"string\", name: \"string\", email: \"string\", age: 0, gender: MALE, extraData: \"string\") {\n    id\n    name\n    email\n    age\n    gender\n    status\n    products {\n      productID\n      productName\n      quantity\n      info {\n        made\n        design\n        warranty\n        AnnualFailureRate\n      }\n      availableIn\n    }\n    data {\n      LicenseType\n      Status\n    }\n  }\n}\n","operationName":null,"variables":null}</con:request>
+    </con:graphQLRequest>
+  </con:graphQLOperation>
+  <con:graphQLOperation name="addAuthor" bindingOperationName="addAuthor" id="5bfae91c-d96d-4a9a-a014-5c536959ebb9">
+    <con:settings/>
+    <con:graphQLRequest name="addAuthor" id="bb7984ea-e9fc-49bd-8310-66d1f653c140">
+      <con:settings/>
+      <con:endpoint>http://rapis02.aqa.com.ru:4005/graphql</con:endpoint>
+      <con:request>{"query":"mutation {\n  addAuthor(input: {author : \"string\", content : \"string\"}) {\n    author\n    content\n  }\n}\n","operationName":null,"variables":null}</con:request>
+    </con:graphQLRequest>
+  </con:graphQLOperation>
+  <con:graphQLOperation name="addProduct" bindingOperationName="addProduct" id="9e25b13a-842b-4efd-9f0f-b3c25969f442">
+    <con:settings/>
+    <con:graphQLRequest name="addProduct" id="1ef13ded-eeea-4cb2-a962-cc1df339c42a">
+      <con:settings/>
+      <con:endpoint>http://rapis02.aqa.com.ru:4005/graphql</con:endpoint>
+      <con:request>{"query":"mutation {\n  addProduct(productID: 0, productName: \"string\", quantity: 0) {\n    productID\n    productName\n    quantity\n    info {\n      made\n      design\n      warranty\n      AnnualFailureRate\n    }\n    availableIn\n  }\n}\n","operationName":null,"variables":null}</con:request>
+    </con:graphQLRequest>
+  </con:graphQLOperation>
+</con:operationGroup>
