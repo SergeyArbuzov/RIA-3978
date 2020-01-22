@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:interface xsi:type="con:GraphQLService" id="abc83357-cfec-4a9e-b4b3-7c5cdd953ff3" name="GraphQL Service 1" type="graphql" definitionUrl="http://rapis02.aqa.com.ru:4005/schema.graphqls" xmlns:con="http://eviware.com/soapui/config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <con:settings>
+    <con:setting id="abc83357-cfec-4a9e-b4b3-7c5cdd953ff3fileName">GraphQL-Service-1</con:setting>
+  </con:settings>
+  <con:endpoints>
+    <con:endpoint>http://rapis02.aqa.com.ru:4005/graphql</con:endpoint>
+  </con:endpoints>
+</con:interface>

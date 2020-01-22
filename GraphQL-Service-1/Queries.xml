@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:operationGroup type="query" name="Queries" id="d7edacd4-5e5a-4dbc-8942-16fcda35cbec" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="d7edacd4-5e5a-4dbc-8942-16fcda35cbecfileName">Queries</con:setting>
+  </con:settings>
+  <con:graphQLOperation name="customer" bindingOperationName="customer" id="6633c946-98a5-415e-82ec-ebc1dbd82a36">
+    <con:settings/>
+    <con:graphQLRequest name="customer" id="c7eb7cd9-865c-4ea1-9baf-cd54f311692a">
+      <con:settings/>
+      <con:endpoint>http://rapis02.aqa.com.ru:4005/graphql</con:endpoint>
+      <con:request>{"query":"query {\n  customer(id: \"string\") {\n    id\n    name\n    email\n    age\n    gender\n    status\n    products {\n      productID\n      productName\n      quantity\n      info {\n        made\n        design\n        warranty\n        AnnualFailureRate\n      }\n      availableIn\n    }\n    data {\n      LicenseType\n      Status\n    }\n  }\n}\n","operationName":null,"variables":null}</con:request>
+    </con:graphQLRequest>
+  </con:graphQLOperation>
+  <con:graphQLOperation name="customers" bindingOperationName="customers" id="e4054427-6b36-4e1b-9c3a-1d107f1b550f">
+    <con:settings/>
+    <con:graphQLRequest name="customers" id="acfb61be-c117-4331-89e7-ae40f8922393">
+      <con:settings/>
+      <con:endpoint>http://rapis02.aqa.com.ru:4005/graphql</con:endpoint>
+      <con:request>{"query":"query {\n  customers {\n    id\n    name\n    email\n    age\n    gender\n    status\n    products {\n      productID\n      productName\n      quantity\n      info {\n        made\n        design\n        warranty\n        AnnualFailureRate\n      }\n      availableIn\n    }\n    data {\n      LicenseType\n      Status\n    }\n  }\n}\n","operationName":null,"variables":null}</con:request>
+    </con:graphQLRequest>
+  </con:graphQLOperation>
+  <con:graphQLOperation name="search" bindingOperationName="search" id="8bfbe78f-d9c9-47a8-b0fb-ffcbf7e2a883">
+    <con:settings/>
+    <con:graphQLRequest name="search" id="e216be8d-6ba4-4ca6-9300-dcf0d4100b91">
+      <con:settings/>
+      <con:endpoint>http://rapis02.aqa.com.ru:4005/graphql</con:endpoint>
+      <con:request>{"query":"query {\n  search(text: \"string\") {\n    searchPreviewText\n  }\n}\n","operationName":null,"variables":null}</con:request>
+    </con:graphQLRequest>
+  </con:graphQLOperation>
+  <con:graphQLOperation name="getCurrentUser" bindingOperationName="getCurrentUser" id="1815343f-9298-4509-918e-c375479f0ada">
+    <con:settings/>
+    <con:graphQLRequest name="getCurrentUser" id="ad6cc278-b491-4431-8685-5fdc4752679c">
+      <con:settings/>
+      <con:endpoint>http://rapis02.aqa.com.ru:4005/graphql</con:endpoint>
+      <con:request>{"query":"query {\n  getCurrentUser {\n    ... on AuthByLogin {\n      username\n      password\n    }\n    ... on AuthByEmail {\n      email\n      password\n    }\n  }\n}\n","operationName":null,"variables":null}</con:request>
+    </con:graphQLRequest>
+  </con:graphQLOperation>
+  <con:graphQLOperation name="checkInputWithDerectives" bindingOperationName="checkInputWithDerectives" id="456b326c-d4d6-494f-a686-9f547e455622">
+    <con:settings/>
+    <con:graphQLRequest name="checkInputWithDerectives" id="86b4d00b-ab37-43fa-bb68-5dedf7c3e348">
+      <con:settings/>
+      <con:endpoint>http://rapis02.aqa.com.ru:4005/graphql</con:endpoint>
+      <con:request>{"query":"query {\n  checkInputWithDerectives(value: \"string\")\n}\n","operationName":null,"variables":null}</con:request>
+    </con:graphQLRequest>
+  </con:graphQLOperation>
+  <con:graphQLOperation name="verifyExtendedType" bindingOperationName="verifyExtendedType" id="65e5e98c-b4d6-4ae0-93c5-67a144efa518">
+    <con:settings/>
+    <con:graphQLRequest name="verifyExtendedType" id="91a6d44c-4707-4c3b-8876-50575432711f">
+      <con:settings/>
+      <con:endpoint>http://rapis02.aqa.com.ru:4005/graphql</con:endpoint>
+      <con:request>{"query":"query {\n  verifyExtendedType(Title: \"string\", Author: \"string\", genre: \"string\") {\n    Title\n    Author\n    genre\n  }\n}\n","operationName":null,"variables":null}</con:request>
+    </con:graphQLRequest>
+  </con:graphQLOperation>
+</con:operationGroup>
